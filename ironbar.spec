@@ -1,11 +1,11 @@
 %global debug_package %{nil}
 
 Name:       ironbar
-Version:    0.16.1
+Version:    0.17.1
 Release:	1
 Group:      Window Manager/Bar
 URL:        https://github.com/JakeStanger/ironbar
-Source0:	%{url}/archive/v%{version}/%{name}-%{version}.tar.gz
+Source0:	%{url}/archive/v%{version}/%{name}-v%{version}.tar.gz
 Source1:    %{name}-%{version}-vendor.tar.gz
 Summary:	Customisable Wayland gtk bar written in Rust
 License:    MIT
@@ -19,9 +19,11 @@ BuildRequires: lib64dbusmenu-gtk3-devel
 BuildRequires: pkgconfig(libpulse)
 BuildRequires: pkgconfig(luajit)
 BuildRequires: lua-lgi
-BuildRequires: libinput
+BuildRequires: pkgconfig(libinput)
+BuildRequires: pkgconfig(libudev)
 
 %description
+%summary.
 
 %prep
 %autosetup -p1
