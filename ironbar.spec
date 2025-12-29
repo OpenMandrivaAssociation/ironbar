@@ -24,7 +24,7 @@ BuildRequires: pkgconfig(libudev)
 BuildRequires: pkgconfig(libevdev)
 BuildRequires: pkgconfig(graphene-gobject-1.0)
 BuildRequires: pkgconfig(gtk4)
-
+BuildRequires: pkgconfig(gtk4-layer-shell-0)
 %description
 %summary.
 
