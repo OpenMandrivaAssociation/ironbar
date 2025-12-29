@@ -1,8 +1,8 @@
 %global debug_package %{nil}
 
 Name:       ironbar
-Version:    0.17.1
-Release:	1
+Version:    0.18.0
+Release:    1
 Group:      Window Manager/Bar
 URL:        https://github.com/JakeStanger/ironbar
 Source0:	%{url}/archive/v%{version}/%{name}-v%{version}.tar.gz
@@ -21,6 +21,7 @@ BuildRequires: pkgconfig(luajit)
 BuildRequires: lua-lgi
 BuildRequires: pkgconfig(libinput)
 BuildRequires: pkgconfig(libudev)
+BuildRequires: pkgconfig(libevdev)
 
 %description
 %summary.
@@ -44,7 +45,7 @@ tar -xzf %{SOURCE1}
 cargo build --offline --release
 
 %install
-install -Dm775 target/release/ironbar %{buildroot}%{_bindir}/ironbar
+install -Dm755 target/release/ironbar %{buildroot}%{_bindir}/ironbar
 
 
 %files
