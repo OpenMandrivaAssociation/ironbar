@@ -22,7 +22,7 @@ BuildRequires: lua-lgi
 BuildRequires: pkgconfig(libinput)
 BuildRequires: pkgconfig(libudev)
 BuildRequires: pkgconfig(libevdev)
-
+BuildRequires: pkgconfig(graphene-gobject-1.0)
 %description
 %summary.
 
