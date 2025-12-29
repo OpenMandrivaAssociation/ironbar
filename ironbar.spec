@@ -23,6 +23,8 @@ BuildRequires: pkgconfig(libinput)
 BuildRequires: pkgconfig(libudev)
 BuildRequires: pkgconfig(libevdev)
 BuildRequires: pkgconfig(graphene-gobject-1.0)
+BuildRequires: pkgconfig(gtk4)
+
 %description
 %summary.
 
