@@ -1,8 +1,8 @@
 %global debug_package %{nil}
 
 Name:       ironbar
-Version:    0.18.0
-Release:    2
+Version:    0.19.0
+Release:    1
 Group:      Window Manager/Bar
 URL:        https://github.com/JakeStanger/ironbar
 Source0:	%{url}/archive/v%{version}/%{name}-v%{version}.tar.gz
@@ -12,19 +12,23 @@ License:    MIT
 
 
 BuildRequires: cargo
-BuildRequires: pkgconfig(gtk+-3.0)
-BuildRequires: pkgconfig(gtk-layer-shell-0)
-BuildRequires: pkgconfig(libssl)
-BuildRequires: lib64dbusmenu-gtk3-devel
-BuildRequires: pkgconfig(libpulse)
+#BuildRequires: pkgconfig(gtk+-3.0)
+#BuildRequires: pkgconfig(gtk-layer-shell-0)
+#BuildRequires: pkgconfig(libssl)
+#BuildRequires: lib64dbusmenu-gtk3-devel
+#BuildRequires: pkgconfig(libpulse)
 BuildRequires: pkgconfig(luajit)
-BuildRequires: lua-lgi
+#BuildRequires: lua-lgi
 BuildRequires: pkgconfig(libinput)
 BuildRequires: pkgconfig(libudev)
 BuildRequires: pkgconfig(libevdev)
-BuildRequires: pkgconfig(graphene-gobject-1.0)
+#BuildRequires: pkgconfig(graphene-gobject-1.0)
 BuildRequires: pkgconfig(gtk4)
 BuildRequires: pkgconfig(gtk4-layer-shell-0)
+BuildRequires: pkgconfig(glib-2.0)
+BuildRequires: pkgconfig(pango)
+BuildRequires: pkgconfig(gdk-pixbuf-2.0)
+
 %description
 %summary.
 
@@ -33,6 +37,7 @@ BuildRequires: pkgconfig(gtk4-layer-shell-0)
 mkdir -p .cargo
 
 cat >> .cargo/config.toml << EOF
+
 [source.crates-io]
 replace-with = "vendored-sources"
 
